@@ -37,6 +37,7 @@ header {
 
 h1 {
     text-align: center;
+    text-transform: uppercase;
 }
 
 header a {
@@ -47,6 +48,10 @@ header a {
     padding: 5px;
     border-radius: 20px;
     font-weight: bold;
+}
+
+header a:hover {
+    opacity: 0.9;
 }
 
 /* end header */
@@ -77,6 +82,13 @@ nav {
     position: relative;
 }
 
+.item:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+
 .sale {
     position: absolute;
     background-color: green;
@@ -88,6 +100,21 @@ nav {
     padding: 5px 10px 10px;
     border-top-right-radius: 30px;
 }
+
+.hearts {
+    position: absolute;
+    bottom: 0;
+    left: 85px;
+    font-size: 40px;
+    color: #DC2152;
+    opacity: 0;
+}
+/* la questione é questa: avrei potuto utilizzare visibility hidden e poi visibility visible al passaggio del mouse e giocarci di conseguenza, ma con opacity e transition l'effetto si fa piú gradevole */
+.item:hover .hearts {
+    opacity: 1;
+    transition: all ease 0.8s;
+}
+
 /* end main */
 
 /* footer */
